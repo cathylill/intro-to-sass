@@ -1,0 +1,79 @@
+%page_layout {
+	margin: $grid * 2;
+	text-align: center;
+
+	.container {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-between;
+		margin: 0 auto;
+		max-width: $grid * 80;
+	}
+}
+
+%block {
+	background: $light;
+	border-radius: $grid;
+	padding: $grid * 2;
+}
+
+%col {
+	margin-bottom: $grid;
+	text-align: left;
+}
+
+%col_full {
+	@extend %col;
+
+	flex: 0 0 100%;
+}
+
+%col_main {
+	@extend %col;
+
+	flex: 2 1;
+	margin-right: $grid;
+	min-width: $grid * 30;
+}
+
+%col_aside {
+	@extend %col;
+
+	flex: 1 1;
+	min-width: $grid * 20;
+}
+
+%header-banner {
+	text-align: center;
+}
+
+%header {
+	border-radius: $grid $grid 0 0;
+}
+
+%menu {
+	display: block;
+	margin: 0;
+	padding: $grid * 1.5;
+
+	> * {
+		display: inline-block;
+
+		a {
+			border-radius: $grid / 2;
+			color: $darkgrey;
+			padding: $grid;
+			text-decoration: none;
+
+			&:hover {
+				background: $base_colour;
+				color: $light;
+			}
+		}
+	}
+}
+
+%top_nav {
+	background: $light;
+	padding: $grid / 4;
+}

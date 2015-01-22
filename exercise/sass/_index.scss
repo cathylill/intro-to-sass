@@ -1,0 +1,35 @@
+body {
+	@extend %page_layout;
+	@include colour-scheme($base_colour, $light);
+}
+
+header {
+	@extend %col_full;
+	@extend %header;
+}
+
+.header-banner {
+	@extend %header-banner;
+}
+
+nav {
+	@extend %top_nav;
+
+	ul {
+		@extend %menu;
+	}
+}
+
+main {
+	@extend %block;
+	@extend %col_main;
+}
+
+aside {
+	@extend %block;
+	@extend %col_aside;
+}
+
+img {
+	max-width: 100%;
+}

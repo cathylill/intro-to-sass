@@ -1,0 +1,21 @@
+@mixin colour_scheme ($base, $text_bg) {
+	background: $midgrey;
+	color: $dark;
+
+	header {
+		background-color: $base;
+		color: $light;
+
+		.header-banner {
+			border-bottom: $grid / 2 solid lighten($base, 5%);
+		}
+	}
+
+	a {
+		color: $base;
+	}
+
+	.heading {
+		color: darken($base, 10%);
+	}
+}
